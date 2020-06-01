@@ -1,0 +1,12 @@
+1. Data set is directly loaded from kaggle into colab.
+2. Two csv files list eval partition and list celeba are used.
+3. training set consists of 5000 images and test set consists of 1000 images.
+4. training and test sets are balanced with equal no of male and female images.
+5. data is loaded into raw_train and raw_test images using opencv.
+6. then data is converted to tf.data.Dataset object using from_tensor_slices method.
+7. data is then divided into batches.
+8. for the model MobileNetV2 is used.
+9. Top layer is removed and one neuron is added for classifying gender.
+10. for optimizer rmsprop is used.
+11. The model is trained is for 20 epochs and it achieved 88% accuracy on the test.
+12. But I have observed when it is trained for 30 epochs the accuracy reaches 90%.
